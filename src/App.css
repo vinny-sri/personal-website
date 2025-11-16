@@ -5,9 +5,20 @@
 }
 
 .container {
-  max-width: 650px;
+  max-width: 900px;
   margin: 0 auto;
   padding: 40px 20px;
+}
+
+.layout {
+  display: flex;
+  gap: 60px;
+  margin-bottom: 40px;
+}
+
+.sidebar {
+  width: 200px;
+  flex-shrink: 0;
 }
 
 header {
@@ -22,23 +33,47 @@ header h1 {
 }
 
 nav {
-  margin-bottom: 40px;
-  padding-bottom: 20px;
-  border-bottom: 1px solid #ccc;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
   font-size: 14px;
+  border-right: 1px solid #ccc;
+  padding-right: 30px;
 }
 
 nav a {
   color: #0066cc;
   text-decoration: none;
+  display: block;
 }
 
 nav a:hover {
   text-decoration: underline;
 }
 
+.contact-links {
+  margin-top: 40px;
+  padding-top: 30px;
+  border-top: 1px solid #ccc;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  font-size: 14px;
+}
+
+.contact-links a {
+  color: #0066cc;
+  text-decoration: none;
+  display: block;
+}
+
+.contact-links a:hover {
+  text-decoration: underline;
+}
+
 main {
-  margin-bottom: 40px;
+  flex: 1;
+  min-width: 0;
 }
 
 section {
@@ -91,5 +126,24 @@ footer {
   font-size: 12px;
   color: #666;
   text-align: center;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .layout {
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .sidebar {
+    width: 100%;
+  }
+  
+  nav {
+    border-right: none;
+    border-bottom: 1px solid #ccc;
+    padding-right: 0;
+    padding-bottom: 20px;
+  }
 }
 

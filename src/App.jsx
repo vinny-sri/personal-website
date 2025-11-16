@@ -5,50 +5,35 @@ function App() {
   return (
     <div className="app">
       <div className="container">
-        <header>
-          <h1>Your Name</h1>
-        </header>
-        
-        <nav>
-          <a href="#about">About</a> | 
-          <a href="#essays">Essays</a> | 
-          <a href="#projects">Projects</a> | 
-          <a href="#contact">Contact</a>
-        </nav>
-        
-        <main>
+        <div className="layout">
+          <aside className="sidebar">
+            <header>
+              <h1>Vinayaka Srinivas</h1>
+            </header>
+            
+            <nav>
+              <a href="#about">About</a>
+              <a href="#technical">Technical</a>
+              <a href="#nontechnical">Non-Technical</a>
+            </nav>
+            
+            <div className="contact-links">
+              <a href="https://www.linkedin.com/in/vinny-s/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+              <a href="https://x.com/vinnyeatscake" target="_blank" rel="noopener noreferrer">Twitter</a>
+            </div>
+          </aside>
+          
+          <main>
           <section id="about">
             <h2>About</h2>
             <p>
-              This is a personal website in the style of Paul Graham and Nat Friedman.
-              Simple, minimal, and focused on content.
+              I'm Vinny. 
+
+              I'm trying to document things that I think about that are more long-form than what would be nice on Twitter. I currently live in San Francisco and I work as an AI FDE at Snowflake. I was at Amazon JWO before, and was at Berkeley EECS before that. A lot of the stuff in the technical tab is a consequence of this, but the stuff in "Everything Else" has everything else. If there was one outcome of visiting this website, it's to follow me on Twitter @vinnyeatscake. 
             </p>
           </section>
-          
-          <section id="essays">
-            <h2>Essays</h2>
-            <ul>
-              <li><a href="#">Essay Title 1</a></li>
-              <li><a href="#">Essay Title 2</a></li>
-              <li><a href="#">Essay Title 3</a></li>
-            </ul>
-          </section>
-          
-          <section id="projects">
-            <h2>Projects</h2>
-            <ul>
-              <li><a href="#">Project 1</a></li>
-              <li><a href="#">Project 2</a></li>
-            </ul>
-          </section>
-          
-          <section id="contact">
-            <h2>Contact</h2>
-            <p>
-              You can reach me at: <a href="mailto:your.email@example.com">your.email@example.com</a>
-            </p>
-          </section>
-        </main>
+          </main>
+        </div>
         
         <footer>
           <p>© {new Date().getFullYear()}</p>
